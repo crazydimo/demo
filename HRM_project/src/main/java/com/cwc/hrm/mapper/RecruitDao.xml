@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.hrm.dao.RecruitDao">
+    <insert id="addRecruit">
+        insert into HRM_RECRUIT values (SEQ_RECRUIT.nextval,#{rec_depId},#{rec_posId},#{rec_budget},#{rec_description},#{rec_welfare},#{rec_requirement},#{rec_time})
+    </insert>
+    <update id="updateRecruit">
+    </update>
+    <delete id="deleteRecruit">
+
+    </delete>
+    <select id="queryRecruit" resultType="com.cwc.hrm.model.Recruit">
+
+    </select>
+</mapper>
