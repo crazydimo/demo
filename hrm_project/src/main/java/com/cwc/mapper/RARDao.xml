@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.RARDao">
+    <insert id="addRAR">
+        insert into HRM_RAR values (SEQ_RAR.nextval,#{rar_recId},#{rar_resId},#{rar_state})
+    </insert>
+    <update id="updateRAR">
+        update HRM_RAR set RAR_RECID=#{rar_recId},RAR_RESID=#{rar_resId},RAR_STATE=#{rar_state} where RAR_ID=#{rar_id}
+    </update>
+    <delete id="delRAR">
+        delete from HRM_RAR where RAR_ID=#{rar_id}
+    </delete>
+    <select id="queryRAR" resultType="com.cwc.model.RAR">
+        select * from HRM_RAR
+    </select>
+    <select id="queryRARByResId" resultType="com.cwc.model.RAR">
+        select * from HRM_RAR where RAR_RESID=#{rar_resId}
+    </select>
+    <select id="queryRARByState" resultType="com.cwc.model.RAR">
+        select * from HRM_RAR where RAR_STATE=#{rar_state}
+    </select>
+</mapper>

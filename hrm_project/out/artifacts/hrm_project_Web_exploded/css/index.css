@@ -1,0 +1,64 @@
+.avi{
+    list-style: none;
+    float: left;
+    cursor:pointer;
+}
+.recs{
+    list-style: none;
+    cursor:pointer;
+}
+.syn{
+    position: absolute;
+    left: 340px;
+    top: 120px;
+}
+.rec{
+    position: absolute;
+    left: 340px;
+    top: 120px;
+}
+.log1{
+    position: absolute;
+    left: 930px;
+    top: 270px;
+}
+.log2{
+    position: absolute;
+    left: 930px;
+    top: 270px;
+}
+.title{
+    position: absolute;
+    left: 330px;
+    top: -10px;
+    color: aqua;
+}
+.nav_f{
+    width: auto;
+    height: 50px;
+    background-color: black;
+}
+#l1{
+    position: absolute;
+    left: 625px;
+    top: 23px;
+    color: aqua;
+}
+#l2{
+    position: absolute;
+    left: 733px;
+    top: 23px;
+    color: aqua;
+}
+#l3{
+    position: absolute;
+    left: 841px;
+    top: 23px;
+    color: aqua;
+}
+#l4{
+    position: absolute;
+    left: 949px;
+    top: 23px;
+    color: aqua;
+}

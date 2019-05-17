@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.ResumeDao">
+    <insert id="addResume">
+        insert into HRM_RESUME values (SEQ_RESUME.nextval,#{res_name},#{res_sex},
+        #{res_birthday},#{res_nation},#{res_nativePlace},#{res_school},#{res_politics},
+        #{res_major},#{res_education},#{res_zipCode},#{res_phone},#{res_email},
+        #{res_address},#{res_evaluation},#{res_uid})
+    </insert>
+    <update id="updateResume">
+        update HRM_RESUME set RES_NAME=#{res_name},RES_SEX=#{res_sex},
+        RES_BIRTHDAY=#{res_birthday},RES_NATION=#{res_nation},RES_NATIVEPLACE=#{res_nativePlace},
+        RES_POLITICS=#{res_politics},RES_MAJOR=#{res_major},RES_EDUCATION=#{res_education},
+        RES_ZIPCODE=#{res_zipCode},RES_PHONE=#{res_phone},RES_EMAIL=#{res_email},
+        RES_ADDRESS=#{res_address},RES_EVALUATION=#{res_evaluation} where RES_ID=#{res_id}
+    </update>
+    <delete id="delResume">
+        delete from HRM_RESUME where RES_ID=#{res_id}
+    </delete>
+    <select id="queryResume" resultType="com.cwc.model.Resume">
+        select * from HRM_RESUME
+    </select>
+    <select id="queryResumeByUid" resultType="com.cwc.model.Resume">
+        select * from HRM_RESUME where RES_UID=#{res_uid}
+    </select>
+</mapper>
