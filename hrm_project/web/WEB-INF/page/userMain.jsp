@@ -21,6 +21,7 @@
 <script src="../../js/jquery-3.1.0.js"></script>
 
 <body>
+<a href="toIndex">注销</a>
 <a href="toResume">填写简历</a>
 <a href="showResume">查看简历</a>
 <a href="showRAR">我的投递</a>

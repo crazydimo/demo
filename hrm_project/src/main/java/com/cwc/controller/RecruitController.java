@@ -27,9 +27,7 @@ public class RecruitController {
 
 
     @RequestMapping("issueRecruit")
-    public String issueRecruit(Integer rec_id, HttpSession session)throws Exception{
-        //未实现页面
-        Recruit recruit = new Recruit();
+    public String issueRecruit(Recruit recruit, HttpSession session)throws Exception{
         recruit.setRec_time(sdf.format(new Date()));
         recruit.setRec_state(1);
         recruitService.addRecruit(recruit);
@@ -41,7 +39,7 @@ public class RecruitController {
         Recruit recruit = new Recruit();
         recruit.setRec_id(rec_id);
         Recruit recruit1 = recruitService.queryRecruitById(recruit);
-        recruit1.setRec_state(2);
+        recruit1.setRec_state(0);
         recruitService.updateRecruit(recruit1);
         return "";
     }

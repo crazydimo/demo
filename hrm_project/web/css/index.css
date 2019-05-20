@@ -4,7 +4,8 @@
     cursor:pointer;
 }
 .recs{
-    list-style: none;
+    width: 468px;
+    height: 64px;
     cursor:pointer;
 }
 .syn{
@@ -72,4 +73,29 @@
     left: 949px;
     top: 23px;
     color: aqua;
+}
+.rec_posId{
+    width: 156px;
+    height: 35px;
+    float: left;
+
+}
+.rec_budget{
+    width: 156px;
+    height: 35px;
+    float: right;
+}
+.rec_requirement{
+    width: 130px;
+    height: 35px;
+    float: left;
+}
+.rec_time{
+    width: 130px;
+    height: 35px;
+    float: right;
+}
+.dropResume{
+    width: 130px;
+    height: 35px;
 }

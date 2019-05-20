@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.TrainingDao">
+    <insert id="addTraining">
+        insert into HRM_TRAINING values (SEQ_TRAINING.nextval,#{tra_title},#{tra_content},
+        #{tra_startTime},#{tra_endTime},#{tra_address},#{tra_state})
+    </insert>
+    <update id="updateTraining">
+        update HRM_TRAINING set TRA_TITLE=#{tra_title},TRA_CONTENT=#{tra_content},
+        TRA_ENDTIME=#{tra_startTime},TRA_ENDTIME=#{tra_endTime},TRA_ADDRESS=#{tra_address},
+        TRA_STATE=#{tra_state} where TRA_ID =#{tra_id}
+    </update>
+    <delete id="delTraining">
+         delete from HRM_TRAINING where TRA_ID =#{tra_id}
+    </delete>
+    <select id="queryTraining" resultType="com.cwc.model.Training">
+        select * from HRM_TRAINING
+    </select>
+</mapper>

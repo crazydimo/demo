@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.TAEDao">
+    <insert id="addTAE">
+        insert into HRM_TAE values (SEQ_TAE.nextval,#{tae_traId},#{tae_empId})
+    </insert>
+    <update id="updateTAE">
+        update HRM_TAE set TAE_TRAID=#{tae_traId},TAE_EMPID=#{tae_empId} where TAE_ID=#{tae_id}
+    </update>
+    <delete id="delTAE">
+        delete from HRM_TAE where TAE_ID=#{tae_id}
+    </delete>
+    <select id="queryTAEByEmpId" resultType="com.cwc.model.TAE">
+        select * from HRM_TAE where TAE_EMPID=#{tae_empId}
+    </select>
+    <select id="queryTAEByTraId" resultType="com.cwc.model.TAE">
+        select * from HRM_TAE where TAE_TRAID=#{tae_traId}
+    </select>
+</mapper>

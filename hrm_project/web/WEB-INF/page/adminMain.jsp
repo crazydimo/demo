@@ -24,7 +24,7 @@
     <a href="toPostRecruitment">发布招聘信息</a>
 </div>
 <div>
-    <h3>已收到的简历</h3>
+    <h3>未查看简历</h3>
     <ul>
         <li>
             招聘id简历id
@@ -35,6 +35,20 @@
             <a href="adminResume?res_id=${rar.rar_resId}&rar_id=${rar.rar_id}">查看简历</a>
         </li>
     </c:forEach>
+    </ul>
+</div>
+<div>
+    <h3>未查看简历</h3>
+    <ul>
+        <li>
+            招聘id简历id
+        </li>
+        <c:forEach items="${sessionScope.rarsAdmin}" var="rar">
+            <li>
+                    ${rar.rar_recId}${rar.rar_resId}
+                <a href="adminResume?res_id=${rar.rar_resId}&rar_id=${rar.rar_id}">查看简历</a>
+            </li>
+        </c:forEach>
     </ul>
 </div>
 <div>

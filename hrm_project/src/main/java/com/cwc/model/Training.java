@@ -10,7 +10,6 @@ public class Training implements Serializable {
     private String tra_endTime;
     private String tra_address;
     private Integer tra_state;
-    private String tra_eid;
 
     public Integer getTra_id() {
         return tra_id;
@@ -68,14 +67,6 @@ public class Training implements Serializable {
         this.tra_state = tra_state;
     }
 
-    public String getTra_eid() {
-        return tra_eid;
-    }
-
-    public void setTra_eid(String tra_eid) {
-        this.tra_eid = tra_eid;
-    }
-
     @Override
     public String toString() {
         return "Training{" +
@@ -86,7 +77,6 @@ public class Training implements Serializable {
                 ", tra_endTime='" + tra_endTime + '\'' +
                 ", tra_address='" + tra_address + '\'' +
                 ", tra_state=" + tra_state +
-                ", tra_eid='" + tra_eid + '\'' +
                 '}';
     }
 }

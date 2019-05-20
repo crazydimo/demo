@@ -58,5 +58,8 @@ public class UserController {
     public String toUserMain()throws Exception{
         return "userMain";
     }
-
+    @RequestMapping("toIndex")
+    public String toIndex()throws Exception{
+        return "../../index";
+    }
 }

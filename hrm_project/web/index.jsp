@@ -23,6 +23,7 @@
     $(function () {
         $(".rec").hide();
         $(".log2").hide();
+        $(".log3").hide();
         $("#l1").click(function () {
             $(".syn").show();
             $(".rec").hide();
@@ -49,6 +50,9 @@
     })
 </script>
 <body>
+<%
+  session.removeAttribute("user");
+%>
 <div class="nav_f">
     <h1 class="title">小高在吗有限公司</h1>
     <div class="nav">
@@ -97,19 +101,19 @@
     <h3>招聘信息</h3>
     <c:choose>
         <c:when test="${sessionScope.recruits != null && fn:length(sessionScope.recruits) != 0}">
-            <ul >
                 <c:forEach items="${sessionScope.recruits}" var="r">
-                    <li class="recs">
-                        <a href="showRecruit?rec_id=${r.rec_id}">
-                        ${r.rec_posId}
-                            ${r.rec_budget}
-                                ${r.rec_welfare}
-                                    ${r.rec_requirement}
-                        </a>
-                    </li>
-                    <a href="dropResume">投递简历</a>
+                    <a href="showRecruit?rec_id=${r.rec_id}">
+                        <div class="recs">
+                            <div class="rec_posId">${r.rec_posId}</div>
+                            <div class="rec_budget">${r.rec_budget}</div>
+                        </div>
+                        <div class="recs">
+                            <div class="rec_requirement">${r.rec_requirement}</div>
+                            <div class="rec_time">${r.rec_time}</div>
+                            <div class="dropResume"><a href="dropResume">投递简历</a></div>
+                        </div>
+                    </a>
                 </c:forEach>
-            </ul>
         </c:when>
         <c:otherwise>
             <h3>没有信息</h3>
