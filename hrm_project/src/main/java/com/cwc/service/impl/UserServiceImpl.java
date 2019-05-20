@@ -33,4 +33,11 @@ public class UserServiceImpl implements UserService {
         return userDao.addUser(user);
     }
 
+    public User queryUserById(User user) {
+        if (user==null) {
+            return null;
+        }
+        return userDao.queryUserById(user);
+    }
+
 }

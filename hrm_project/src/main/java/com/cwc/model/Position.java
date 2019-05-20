@@ -6,7 +6,7 @@ public class Position implements Serializable {
     private Integer pos_id;
     private String pos_name;
     private String pos_time;
-    private String pos_depId;
+    private Integer pos_depId;
 
     public Integer getPos_id() {
         return pos_id;
@@ -32,11 +32,11 @@ public class Position implements Serializable {
         this.pos_time = pos_time;
     }
 
-    public String getPos_depId() {
+    public Integer getPos_depId() {
         return pos_depId;
     }
 
-    public void setPos_depId(String pos_depId) {
+    public void setPos_depId(Integer pos_depId) {
         this.pos_depId = pos_depId;
     }
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.EmployeeDao">
+    <insert id="addEmployee">
+        insert into HRM_EMPLOYEE values (SEQ_EMPLOYEE.nextval,#{emp_account},#{emp_pass},#{emp_depId}
+        ,#{emp_posId},#{emp_salary},#{emp_state},#{emp_name},#{emp_birthday},#{emp_sex},#{emp_phone}
+        ,#{emp_email},#{emp_address})
+    </insert>
+    <update id="updateEmployee">
+        update HRM_EMPLOYEE set EMP_ACCOUNT=#{emp_account},EMP_PASS=#{emp_pass},EMP_DEPID=#{emp_depId}
+        ,EMP_POSID=#{emp_posId},EMP_SALARY=#{emp_salary},EMP_STATE=#{emp_state},EMP_NAME=#{emp_name}
+        ,EMP_BIRTHDAY=#{emp_birthday},EMP_SEX=#{emp_sex},EMP_PHONE=#{emp_phone},EMP_EMAIL=#{emp_email}
+        ,EMP_ADDRESS=#{emp_address} where EMP_ID=#{emp_id}
+    </update>
+    <delete id="delEmployee">
+        delete from HRM_EMPLOYEE where EMP_ID=#{emp_id}
+    </delete>
+    <select id="queryEmployee" resultType="com.cwc.model.Employee">
+        select * from HRM_EMPLOYEE
+    </select>
+    <select id="queryEmployeeByEid" resultType="com.cwc.model.Employee">
+        SELECT * from HRM_EMPLOYEE where EMP_ID=#{emp_id}
+    </select>
+    <select id="queryEmployeeByENameAndEPass" resultType="com.cwc.model.Employee">
+        select * from HRM_EMPLOYEE where EMP_NAME=#{emp_name} and EMP_PASS=#{emp_pass}
+    </select>
+</mapper>

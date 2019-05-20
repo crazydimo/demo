@@ -19,7 +19,7 @@
 <form action='updateResume' method='post'>
     <table border='1'>
         <tr>
-            <td colspan='4' align='center'><span>我的个人简历</span></td>
+            <td colspan='4' align='center'><span>个人简历</span></td>
         </tr>
         <tr>
             <input type="hidden" name="res_id" value="${sessionScope.resume.res_id}">

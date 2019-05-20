@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.InterviewDao">
+    <insert id="addInterview">
+        insert into HRM_INTERVIEW values (SEQ_INTERVIEW.nextval,#{int_time},#{int_address},#{int_linkman},#{int_uid},#{int_state},#{int_RARId})
+    </insert>
+    <update id="updateInterview">
+        update HRM_INTERVIEW set INT_TIME=#{int_time},INT_ADDRESS=#{int_address},INT_LINKMAN=#{int_linkman},INT_UID=#{int_uid},INT_STATE=#{int_state},INT_RARID=#{int_RARId} where INT_ID=#{int_id}
+    </update>
+    <delete id="delInterview">
+        delete from HRM_INTERVIEW where INT_ID=#{int_id}
+    </delete>
+    <select id="queryInterview" resultType="com.cwc.model.Interview">
+        select * from HRM_INTERVIEW
+    </select>
+    <select id="queryInterviewByUid" resultType="com.cwc.model.Interview">
+        select * from HRM_INTERVIEW where INT_UID=#{int_uid}
+    </select>
+    <select id="queryInterviewById" resultType="com.cwc.model.Interview">
+        select * from HRM_INTERVIEW where INT_ID=#{int_id}
+    </select>
+    <select id="queryInterviewByState" resultType="com.cwc.model.Interview">
+        select * from HRM_INTERVIEW where INT_STATE=#{int_state}
+    </select>
+</mapper>

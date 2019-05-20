@@ -39,6 +39,13 @@ public class ResumeServiceImpl implements ResumeService {
         return resumeDao.queryResumeByUid(resume);
     }
 
+    public Resume queryResumeById(Resume resume) {
+        if (resume==null){
+            return null;
+        }
+        return resumeDao.queryResumeById(resume);
+    }
+
     public Resume queryResume() {
         return resumeDao.queryResume();
     }

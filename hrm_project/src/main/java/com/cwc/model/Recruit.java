@@ -6,7 +6,7 @@ public class Recruit implements Serializable {
     private Integer rec_id;
     private Integer rec_depId;
     private Integer rec_posId;
-    private Integer rec_budget;
+    private Double rec_budget;
     private String rec_description;
     private String rec_welfare;
     private String rec_requirement;
@@ -37,11 +37,11 @@ public class Recruit implements Serializable {
         this.rec_posId = rec_posId;
     }
 
-    public Integer getRec_budget() {
+    public Double getRec_budget() {
         return rec_budget;
     }
 
-    public void setRec_budget(Integer rec_budget) {
+    public void setRec_budget(Double rec_budget) {
         this.rec_budget = rec_budget;
     }
 

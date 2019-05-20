@@ -12,6 +12,7 @@ import java.util.List;
 public class DepartmentServiceImpl implements DepartmentService {
     @Resource
     private DepartmentDao departmentDao;
+
     public boolean addDepartment(Department department) {
         if (department==null){
             return false;

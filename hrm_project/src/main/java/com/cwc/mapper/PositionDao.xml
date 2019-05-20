@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.PositionDao">
+    <insert id="addPosition">
+        insert into HRM_POSITION values (SEQ_EMPLOYEE.nextval,#{pos_name},#{pos_time},#{pos_depId})
+    </insert>
+    <update id="updatePosition">
+        update HRM_POSITION set POS_NAME=#{pos_name},POS_TIME=#{pos_time},pos_depid=#{pos_depId} where POS_ID=#{pos_id}
+    </update>
+    <delete id="delPosition">
+        delete from HRM_POSITION where POS_ID=#{pos_id}
+    </delete>
+    <select id="queryPosition" resultType="com.cwc.model.Position">
+        select * from HRM_POSITION
+    </select>
+    <select id="queryPositionByDepId" resultType="com.cwc.model.Position">
+        select * from HRM_POSITION where POS_DEPID=#{pos_depId}
+    </select>
+</mapper>

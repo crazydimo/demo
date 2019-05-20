@@ -27,6 +27,11 @@
     left: 930px;
     top: 270px;
 }
+.log3{
+    position: absolute;
+    left: 930px;
+    top: 270px;
+}
 .title{
     position: absolute;
     left: 330px;
@@ -57,6 +62,12 @@
     color: aqua;
 }
 #l4{
+    position: absolute;
+    left: 1057px;
+    top: 23px;
+    color: aqua;
+}
+#l5{
     position: absolute;
     left: 949px;
     top: 23px;

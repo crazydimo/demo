@@ -23,4 +23,7 @@
     <select id="queryResumeByUid" resultType="com.cwc.model.Resume">
         select * from HRM_RESUME where RES_UID=#{res_uid}
     </select>
+    <select id="queryResumeById" resultType="com.cwc.model.Resume">
+        select * from HRM_RESUME where RES_ID=#{res_id}
+    </select>
 </mapper>

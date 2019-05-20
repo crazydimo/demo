@@ -8,5 +8,6 @@ public interface RecruitService {
     boolean addRecruit(Recruit recruit);
     boolean deleteRecruit(Recruit recruit);
     boolean updateRecruit(Recruit recruit);
+    Recruit queryRecruitById(Recruit recruit);
     List<Recruit> queryRecruit();
 }

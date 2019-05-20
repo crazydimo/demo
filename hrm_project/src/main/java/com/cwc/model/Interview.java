@@ -9,6 +9,7 @@ public class Interview implements Serializable {
     private String int_linkman;
     private Integer int_uid;
     private Integer int_state;
+    private Integer int_rarId;
 
     public Integer getInt_id() {
         return int_id;
@@ -58,6 +59,14 @@ public class Interview implements Serializable {
         this.int_state = int_state;
     }
 
+    public Integer getInt_rarId() {
+        return int_rarId;
+    }
+
+    public void setInt_rarId(Integer int_rarId) {
+        this.int_rarId = int_rarId;
+    }
+
     @Override
     public String toString() {
         return "Interview{" +
@@ -67,6 +76,7 @@ public class Interview implements Serializable {
                 ", int_linkman='" + int_linkman + '\'' +
                 ", int_uid=" + int_uid +
                 ", int_state=" + int_state +
+                ", int_rarId=" + int_rarId +
                 '}';
     }
 }

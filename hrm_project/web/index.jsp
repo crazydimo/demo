@@ -34,10 +34,17 @@
         $("#l3").click(function () {
             $(".log1").show();
             $(".log2").hide();
+            $(".log3").hide();
         });
         $("#l4").click(function () {
             $(".log2").show();
             $(".log1").hide();
+            $(".log3").hide();
+        });
+        $("#l5").click(function () {
+            $(".log3").show();
+            $(".log1").hide();
+            $(".log2").hide();
         });
     })
 </script>
@@ -49,7 +56,9 @@
             <li class="avi" id="l1"><a >了解小高</a></li>
             <li class="avi" id="l2"><a >招聘信息</a></li>
             <li class="avi" id="l3"><a>用户登录</a></li>
+            <li class="avi" id="l5"><a>员工登录</a></li>
             <li class="avi" id="l4"><a>管理员登录</a></li>
+
         </ul>
     </div>
 </div>
@@ -71,6 +80,14 @@
         <input type="submit" value="登录">
     </form>
 </div>
+<div class="log3">
+    <h2>员工登录</h2>
+    <form action="loginEmployee" method="post">
+        用户名：<input name="emp_name"><br>
+        密　码：<input name="emp_pass"><br>
+        <input type="submit" value="登录">
+    </form>
+</div>
 
 <div class="syn">
     <h3>公司简介</h3>
@@ -83,7 +100,7 @@
             <ul >
                 <c:forEach items="${sessionScope.recruits}" var="r">
                     <li class="recs">
-                        <a href="toRecruit">
+                        <a href="showRecruit?rec_id=${r.rec_id}">
                         ${r.rec_posId}
                             ${r.rec_budget}
                                 ${r.rec_welfare}

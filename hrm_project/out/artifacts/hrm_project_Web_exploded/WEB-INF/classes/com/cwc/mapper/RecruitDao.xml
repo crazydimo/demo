@@ -14,4 +14,7 @@
     <select id="queryRecruit" resultType="com.cwc.model.Recruit">
         select * from HRM_RECRUIT
     </select>
+    <select id="queryRecruitById" resultType="com.cwc.model.Recruit">
+        select * from HRM_RECRUIT where REC_ID=#{rec_id}
+    </select>
 </mapper>

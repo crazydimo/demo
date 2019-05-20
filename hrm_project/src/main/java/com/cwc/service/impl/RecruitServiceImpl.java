@@ -33,6 +33,13 @@ public class RecruitServiceImpl implements RecruitService {
         return recruitDao.updateRecruit(recruit);
     }
 
+    public Recruit queryRecruitById(Recruit recruit) {
+        if (recruit==null){
+            return null;
+        }
+        return recruitDao.queryRecruitById(recruit);
+    }
+
     public List<Recruit> queryRecruit() {
         return recruitDao.queryRecruit();
     }

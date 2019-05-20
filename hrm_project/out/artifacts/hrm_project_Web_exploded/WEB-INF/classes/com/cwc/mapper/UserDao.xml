@@ -13,4 +13,7 @@
     <select id="queryUser" resultType="com.cwc.model.User">
         select * from HRM_USER
     </select>
+    <select id="queryUserById" resultType="com.cwc.model.User">
+        select * from HRM_USER where USER_ID=#{user_id}
+    </select>
 </mapper>

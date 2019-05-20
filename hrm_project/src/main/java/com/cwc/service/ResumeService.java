@@ -7,5 +7,6 @@ public interface ResumeService {
     boolean delResume(Resume resume);
     boolean updateResume(Resume resume);
     Resume queryResumeByUid(Resume resume);
+    Resume queryResumeById(Resume resume);
     Resume queryResume();
 }
