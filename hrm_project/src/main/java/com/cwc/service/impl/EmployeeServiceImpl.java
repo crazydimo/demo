@@ -6,6 +6,7 @@ import com.cwc.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -37,6 +38,13 @@ public class EmployeeServiceImpl implements EmployeeService {
             return null;
         }
         return employeeDao.queryEmployeeByEid(employee);
+    }
+
+    public List<Employee> queryEmployeeByPosId(Employee employee) {
+        if (employee == null){
+            return null;
+        }
+        return employeeDao.queryEmployeeByPosId(employee);
     }
 
     public Employee login(Employee employee) {

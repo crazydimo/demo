@@ -6,6 +6,7 @@ import com.cwc.service.TrainingService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class TrainingServiceImpl implements TrainingService {
@@ -32,7 +33,7 @@ public class TrainingServiceImpl implements TrainingService {
         return trainingDao.updateTraining(training);
     }
 
-    public Training queryTraining() {
+    public List<Training> queryTraining() {
         return trainingDao.queryTraining();
     }
 }

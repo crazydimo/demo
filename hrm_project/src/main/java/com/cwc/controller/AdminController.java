@@ -73,6 +73,7 @@ public class AdminController {
         Interview interview = new Interview();
         interview.setInt_id(inte_id);
         Interview interview1 = interviewService.queryInterviewById(interview);
+        interview1.setInt_state(4);
         RAR rar = new RAR();
         rar.setRar_id(interview1.getInt_rarId());
         RAR rar1 = rarService.queryRARById(rar);

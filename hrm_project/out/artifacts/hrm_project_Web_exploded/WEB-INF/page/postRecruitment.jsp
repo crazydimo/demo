@@ -20,9 +20,9 @@
         $(function () {
             $("#change").change(function () {
                 $.get("queryPosition",{"dep_id":$(this).val()},function (obj) {
-                    $("#select2 option").remove();
+                    $("#select option").remove();
                     for (var i in obj) {
-                        $("#select2").append("<option value='"+obj[i]['pos_id']+"'>"+obj[i]['pos_name']+"</option>")
+                        $("#select").append("<option value='"+obj[i]['pos_id']+"'>"+obj[i]['pos_name']+"</option>")
                     }
                 })
             })
@@ -42,7 +42,7 @@
                 </select>
             </td>
         </tr>
-        <tr><td>招聘职位：</td><td><select name="rec_position" id="select2"><option></option></select></td></tr>
+        <tr><td>招聘职位：</td><td><select name="rec_position" id="select"><option></option></select></td></tr>
         <tr><td>薪　　资：</td><td><input required type="number" name="rec_budget" style="border: 0px" autocomplete="off" style="outline: none"></td></tr>
         <tr><td>职位描述：</td><td><input type="text" name="rec_description" style="border: 0px" required autocomplete="off" style="outline: none"></td></tr>
         <tr><td>福　　利：</td><td><input type="text" name="rec_description" style="border: 0px" required autocomplete="off" style="outline: none"></td></tr>

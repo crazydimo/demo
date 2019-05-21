@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,10 +37,11 @@ public class PositionController {
 
     @RequestMapping("queryPosition")
     @ResponseBody
-    public List<Position> queryPosition(Integer dep_id)throws Exception{
+    public List<Position> queryPosition(Integer dep_id, HttpSession session)throws Exception{
         Position position = new Position();
         position.setPos_depId(dep_id);
         List<Position> positions = positionService.queryPositionByDepId(position);
+        session.setAttribute("positionsAdmin",positions);
         return positions;
     }
 }

@@ -25,7 +25,6 @@ public class RecruitController {
         return "showRecruit";
     }
 
-
     @RequestMapping("issueRecruit")
     public String issueRecruit(Recruit recruit, HttpSession session)throws Exception{
         recruit.setRec_time(sdf.format(new Date()));

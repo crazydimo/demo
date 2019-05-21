@@ -24,6 +24,13 @@
     <a href="toPostRecruitment">发布招聘信息</a>
 </div>
 <div>
+    <a href="toCreateTraining">创建培训</a>
+</div>
+<div>
+    <a href="toIssueTraining">发布培训活动</a>
+</div>
+
+<div>
     <h3>未查看简历</h3>
     <ul>
         <li>
@@ -38,7 +45,7 @@
     </ul>
 </div>
 <div>
-    <h3>未查看简历</h3>
+    <h3>已查看简历</h3>
     <ul>
         <li>
             招聘id简历id

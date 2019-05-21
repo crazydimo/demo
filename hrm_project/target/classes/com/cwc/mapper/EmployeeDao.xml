@@ -24,4 +24,7 @@
     <select id="queryEmployeeByENameAndEPass" resultType="com.cwc.model.Employee">
         select * from HRM_EMPLOYEE where EMP_NAME=#{emp_name} and EMP_PASS=#{emp_pass}
     </select>
+    <select id="queryEmployeeByPosId" resultType="com.cwc.model.Employee">
+        select * from HRM_EMPLOYEE where EMP_POSID=#{emp_posId}
+    </select>
 </mapper>
