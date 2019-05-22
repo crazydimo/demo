@@ -62,7 +62,7 @@ public class AdminController {
         User user1 = userService.queryUserById(user);
 
         session.setAttribute("user",user1);
-        session.setAttribute("rarAdmin",rar);
+        session.setAttribute("rarAdmin",rar1);
         session.setAttribute("resumeAdmin",resume1);
         return "adminResume";
     }

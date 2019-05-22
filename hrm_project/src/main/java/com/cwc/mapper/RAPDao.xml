@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.RAPDao">
+    <insert id="addRAP">
+        insert into HRM_RAP values (SEQ_RAP.nextval,#(rap_time),#{rap_reason}.#{rap_salary},#{rap_eid})
+    </insert>
+    <update id="updateRAP">
+        update HRM_RAP set RAP_TIME=#(rap_time),RAP_REASON=#{rap_reason}.RAP_SALARY=#{rap_salary},RAP_EID=#{rap_eid} where RAP_ID=#{rap_id}
+    </update>
+    <delete id="delRAP">
+        delete from HRM_RAP where RAP_ID=#{rap_id}
+    </delete>
+    <select id="queryRAP" resultType="com.cwc.model.RAP">
+        select * from HRM_RAP
+    </select>
+</mapper>

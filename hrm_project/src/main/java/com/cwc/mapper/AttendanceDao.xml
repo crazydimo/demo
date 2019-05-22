@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.AttendanceDao">
+    <insert id="addAttendance">
+        insert into HRM_ATTENDANCE values (SEQ_ATTENDANCE.nextval,#{att_startTime},#{att_endTime},#{att_state},#{att_eid})
+    </insert>
+    <update id="updateAttendance">
+        update HRM_ATTENDANCE set ATT_STARTTIME=#{att_startTime},ATT_ENDTIME=#{att_endTime},ATT_STATE=#{att_state},ATT_EID=#{att_eid} where ATT_ID=#{att_id}
+    </update>
+    <delete id="delAttendance">
+        delete from HRM_ATTENDANCE where ATT_ID =#{att_id}
+    </delete>
+    <select id="queryAttendance" resultType="com.cwc.model.Attendance">
+        select * from HRM_ATTENDANCE
+    </select>
+</mapper>

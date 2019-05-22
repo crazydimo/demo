@@ -3,12 +3,12 @@ package com.cwc.service.impl;
 import com.cwc.dao.TAEDao;
 import com.cwc.model.TAE;
 import com.cwc.service.TAEService;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@Controller
+@Service
 public class TAEServiceImpl implements TAEService {
     @Resource
     private TAEDao taeDao;

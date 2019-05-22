@@ -17,11 +17,11 @@
 </head>
 <body>
 <form action="addInterview" method="post">
-    <input type="date" name="int_time">
+    <input type="datetime-local" name="int_time">
     <input name="int_address">
     <input name="int_linkman">
     <input type='hidden' id='uid' name='int_uid' value="${sessionScope.user.user_id}">
-    <input type="hidden" name="int_rarId" value="${sessionScope.rarAdmin.int_rarId}">
+    <input type="hidden" name="int_rarId" value="${sessionScope.rarAdmin.rar_id}">
     <input type="submit" value="发送面试">
 </form>
 </body>

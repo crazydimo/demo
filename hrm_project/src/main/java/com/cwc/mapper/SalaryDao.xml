@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cwc.dao.SalaryDao">
+    <insert id="addSalary">
+        insert into HRM_SALARY values (SEQ_SALARY.nextval,#{sal_time},#{sal_actual},#{sal_eid})
+    </insert>
+    <update id="updateSalary">
+        update HRM_SALARY set SAL_TIME=#{sal_time},SAL_ACTUAL=#{sal_actual},SAL_EID=#{sal_eid} where SAL_ID=#{sal_id}
+    </update>
+    <delete id="delSalary">
+        delete from HRM_SALARY where SAL_ID=#{sal_id}
+    </delete>
+    <select id="querySalary" resultType="com.cwc.model.Salary">
+        select * from HRM_SALARY
+    </select>
+</mapper>
