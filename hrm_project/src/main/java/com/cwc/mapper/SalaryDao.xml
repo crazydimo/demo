@@ -13,4 +13,7 @@
     <select id="querySalary" resultType="com.cwc.model.Salary">
         select * from HRM_SALARY
     </select>
+    <select id="querySalaryByEid" resultType="com.cwc.model.Salary">
+        select * from HRM_SALARY where SAL_EID=#{sal_eid}
+    </select>
 </mapper>

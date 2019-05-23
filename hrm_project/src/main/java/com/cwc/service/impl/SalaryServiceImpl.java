@@ -6,6 +6,7 @@ import com.cwc.service.SalaryService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class SalaryServiceImpl implements SalaryService {
@@ -30,6 +31,13 @@ public class SalaryServiceImpl implements SalaryService {
             return false;
         }
         return salaryDao.updateSalary(salary);
+    }
+
+    public List<Salary> querySalaryByEid(Salary salary) {
+        if (salary==null){
+            return null;
+        }
+        return salaryDao.querySalaryByEid(salary);
     }
 
     public Salary querySalary() {

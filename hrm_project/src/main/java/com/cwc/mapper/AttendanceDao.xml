@@ -13,4 +13,7 @@
     <select id="queryAttendance" resultType="com.cwc.model.Attendance">
         select * from HRM_ATTENDANCE
     </select>
+    <select id="queryAttendanceByStartTimeAndEid" resultType="com.cwc.model.Attendance">
+        select * from HRM_ATTENDANCE where instr(ATT_STARTTIME,#{att_startTime})>0 and ATT_EID=#{att_eid}
+    </select>
 </mapper>

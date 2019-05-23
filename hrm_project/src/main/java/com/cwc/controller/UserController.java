@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -44,15 +45,11 @@ public class UserController {
         return "../../index";
     }
     @RequestMapping("register")
-    public String register(User user)throws Exception{
+    public void register(User user, HttpServletResponse response)throws Exception{
         if (userService.register(user)){
-            return "../../index";
+            response.getWriter().print("<script language='javascript'>alert('注册成功');window.location.href='index';</script>");
         }
-        return "register";
-    }
-    @RequestMapping("toRegister")
-    public String toRegister()throws Exception{
-        return "register";
+        response.getWriter().print("<script language='javascript'>alert('注册失败');window.location.href='index';</script>");
     }
     @RequestMapping("toUserMain")
     public String toUserMain()throws Exception{

@@ -121,6 +121,7 @@ public class AdminController {
         List<RAR> rars = rarService.queryRARByState();
         List<Interview> interviews = interviewService.queryInterviewByState();
         session.setAttribute("rarsAdmin",rars);
+        session.setAttribute("interviewsAdmin",interviews);
 
         return "adminMain";
     }

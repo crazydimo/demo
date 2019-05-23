@@ -22,5 +22,9 @@
 <div>
     <a>通讯录</a>
 </div>
+<div>
+    <a href="clockIn">上班打卡</a>
+    <a href="clockOut">下班打卡</a>
+</div>
 </body>
 </html>

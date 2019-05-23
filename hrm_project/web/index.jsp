@@ -17,8 +17,10 @@
     <base href="<%=basePath%>"/>
     <title>Title</title>
 </head>
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
 <link href="css/index.css" type="text/css" rel="stylesheet">
 <script src="js/jquery-3.1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
     $(function () {
         $(".rec").hide();
@@ -52,6 +54,7 @@
 <body>
 <%
   session.removeAttribute("user");
+  session.removeAttribute("resume");
 %>
 <div class="nav_f">
     <h1 class="title">小高在吗有限公司</h1>
@@ -74,7 +77,7 @@
         密　码：<input name="user_pass"><br>
         <input type="submit" value="登录">
     </form>
-    <a href="toRegister">还没有账号？去注册</a>
+    <a data-toggle="modal" data-target="#exampleModal">还没有账号？去注册</a>
 </div>
 <div class="log2">
     <h2>管理员登录</h2>
@@ -87,7 +90,7 @@
 <div class="log3">
     <h2>员工登录</h2>
     <form action="loginEmployee" method="post">
-        用户名：<input name="emp_name"><br>
+        用户名：<input name="emp_account"><br>
         密　码：<input name="emp_pass"><br>
         <input type="submit" value="登录">
     </form>
@@ -120,5 +123,42 @@
         </c:otherwise>
     </c:choose>
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="register" method="post">
+                    <div class="form-group">
+                        <label for="recipient-name"  class="col-sm-2 control-label">用户名：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="user_name" id="recipient-name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-pass"  class="col-sm-2 control-label">密　码：</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="user_pass" id="recipient-pass"  required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">注册</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

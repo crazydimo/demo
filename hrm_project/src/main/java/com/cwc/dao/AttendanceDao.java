@@ -6,5 +6,6 @@ public interface AttendanceDao {
     boolean addAttendance(Attendance attendance);
     boolean delAttendance(Attendance attendance);
     boolean updateAttendance(Attendance attendance);
+    Attendance queryAttendanceByStartTimeAndEid(Attendance attendance);
     Attendance queryAttendance();
 }

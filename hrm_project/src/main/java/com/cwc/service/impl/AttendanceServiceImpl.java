@@ -32,6 +32,13 @@ public class AttendanceServiceImpl implements AttendanceService {
         return attendanceDao.updateAttendance(attendance);
     }
 
+    public Attendance queryAttendanceByStartTimeAndEid(Attendance attendance) {
+        if (attendance==null){
+            return null;
+        }
+        return attendanceDao.queryAttendanceByStartTimeAndEid(attendance);
+    }
+
     public Attendance queryAttendance() {
         return attendanceDao.queryAttendance();
     }
